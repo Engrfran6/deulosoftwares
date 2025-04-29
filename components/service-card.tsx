@@ -21,7 +21,7 @@ interface ServiceCardProps {
 
 export function ServiceCard({icon, title, description, link, expanded = false}: ServiceCardProps) {
   return (
-    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg bg-muted">
+    <Card className="h-full flex flex-col transition-all duration-300 hover:shadow-lg bg-muted hover:bg-muted/50">
       <CardHeader>
         <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center mb-4">
           {icon}
@@ -32,10 +32,12 @@ export function ServiceCard({icon, title, description, link, expanded = false}: 
       <CardContent>
         {expanded && <p className="text-muted-foreground text-sm">{description}</p>}
       </CardContent>
-      <CardFooter className="mt-auto">
+      <CardFooter className="mt-auto ">
         <Button asChild variant="ghost" className="p-0 h-auto font-medium">
-          <Link href={link} className="flex items-center text-primary">
-            Learn More <ArrowRight className="ml-2 h-4 w-4" />
+          <Link
+            href={link}
+            className="flex items-center text-primary underline underline-offset-8 decoration-white">
+            Learn More <ArrowRight className="ml-2 h-4 w-4 " />
           </Link>
         </Button>
       </CardFooter>

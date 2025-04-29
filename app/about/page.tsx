@@ -40,12 +40,13 @@ export default function AboutPage() {
       <section className="section-padding">
         <div className="container-custom">
           <div className="grid gap-12 lg:grid-cols-2 items-center">
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl bg-white">
               <Image
-                src="/placeholder.png?height=400&width=600"
+                src="/about.svg?height=400&width=600"
                 alt="Our Story"
                 fill
-                className="object-cover"
+                priority
+                className="object-cover w-full h-full"
               />
             </div>
             <div className="space-y-6">
@@ -188,15 +189,17 @@ export default function AboutPage() {
                 projects, collaborate with skilled professionals, and grow your career in a
                 supportive and dynamic environment.
               </p>
-              <Button asChild>
-                <Link href="/careers">
-                  View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
-                </Link>
+              <Button disabled>
+                <Button asChild>
+                  <Link href="/careers">
+                    View Open Positions <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </Button>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/placeholder.png?height=400&width=600"
+                src="/teammember.png?height=400&width=600"
                 alt="Join Our Team"
                 fill
                 className="object-cover"

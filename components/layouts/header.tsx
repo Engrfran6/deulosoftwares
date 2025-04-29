@@ -2,21 +2,13 @@
 
 import {ThemeToggle} from '@/components/theme-toggle';
 import {Button} from '@/components/ui/button';
+import {navItems} from '@/data';
 import {cn} from '@/lib/utils';
 import {Menu, X} from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {usePathname} from 'next/navigation';
 import {useEffect, useState} from 'react';
-
-const navItems = [
-  {name: 'Home', href: '/'},
-  {name: 'About', href: '/about'},
-  {name: 'Services', href: '/services'},
-  {name: 'Portfolio', href: '/portfolio'},
-  {name: 'Blog', href: '/blog'},
-  {name: 'Contact', href: '/contact'},
-];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

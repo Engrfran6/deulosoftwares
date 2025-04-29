@@ -1,5 +1,7 @@
 // Define the portfolio item type
 
+import {JSX} from 'react';
+
 export interface BlogPost {
   slug: string;
   title: string;
@@ -18,6 +20,25 @@ export interface BlogPost {
   image: string;
   relatedPosts: string[];
 }
+
+export type Testimonial = {
+  quote: string;
+  author: string;
+  position: string;
+};
+
+export type ProcessStep = {
+  number: string;
+  title: string;
+  description: string;
+};
+
+export type Service = {
+  icon: JSX.Element;
+  title: string;
+  description: string;
+  link: string;
+};
 
 // Define the service data structure
 export interface ServiceDetail {
